@@ -1,14 +1,20 @@
 let numberOfFilms = +prompt("Сколько фильмов ви уже посмотрели",'');
 
-const personalMovieDB = {
+let personalMovieDB = {
     count: numberOfFilms,
     movies:{},
     actors:{},
     genres:[],
     privat:false
 };
-prompt("Один из последних просмотених фильмов?");
+for (let i=0  ; i< 2 ; i++){
+let a = prompt("Один из последних просмотених фильмов?",''),
+      b = prompt("На сколько оцените его?",'');
+      
+personalMovieDB.movies[a] = b;
+}
 
-prompt("На сколько оцените его?");
-console.log(personalMovieDB.movies);
+console.log(personalMovieDB);
+
+
 
